@@ -1,0 +1,11 @@
+.sociallink > div:first-of-type {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--brand-black);
+  }
+
+  .sociallink img {
+    margin: 14px 6px 6px 6px;
+    cursor: pointer;
+  }

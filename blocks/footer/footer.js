@@ -16,5 +16,10 @@ export default async function decorate(block) {
   const footer = document.createElement('div');
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
+  const firstDiv = footer.querySelector('div'); // Select the first div inside the footer
+  if (footer) {
+      footer.classList.add('footer-upper-section'); // Add your desired class 
+  }
+
   block.append(footer);
 }

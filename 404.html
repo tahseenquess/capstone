@@ -1,68 +1,107 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Page not found</title>
-  <script type="text/javascript">
-    window.isErrorPage = true;
-    window.errorCode = '404';
-  </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Page not found">
-  <script src="/scripts/scripts.js" type="module" crossorigin="use-credentials"></script>
-  <script type="module">
-    window.addEventListener('load', () => {
-      if (document.referrer) {
-        const { origin, pathname } = new URL(document.referrer);
-        if (origin === window.location.origin) {
-          const backBtn = document.createElement('a');
-          backBtn.classList.add('button', 'error-button-back');
-          backBtn.href = pathname;
-          backBtn.textContent = 'Go back';
-          backBtn.title = 'Go back';
-          const btnContainer = document.querySelector('.button-container');
-          btnContainer.append(backBtn);
-        }
-      }
-    });
-  </script>
-  <script type="module">
-    import { sampleRUM } from '/scripts/aem.js';
-    sampleRUM('404', { source: document.referrer });
-  </script>
-  <link rel="stylesheet" href="/styles/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found</title>
   <style>
-    main.error {
-      min-height: calc(100vh - var(--nav-height));
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
       display: flex;
       align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      color: #ffffff;
+      text-align: center;
     }
 
-    main.error .error-number {
+    .section {
+      padding: 20px;
+      max-width: 600px;
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+ 
+    }
+
+    .error-number {
+      font-size: 1rem;
+      fill: #ffffff;
+      margin: 0 auto;
+    }
+
+    .error-message {
+      font-size: 2rem;
+      margin: 20px 0;
+    }
+
+    .button-container {
+      margin-top: 20px;
+    }
+
+    .button {
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .error-button-home {
+      background-color: #ffffff;
+      color: #ff7e5f;
+      border: none;
+      cursor: pointer;
+    }
+
+    .error-button-home:hover {
+      background-color: #feb47b;
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+
+    .search-container {
+      margin-top: 20px;
+    }
+
+    .search-bar {
       width: 100%;
+      padding: 12px;
+      border-radius: 5px;
+      border: none;
+      font-size: 1rem;
     }
 
-    main.error .error-number text {
-      font-family: monospace;
+    .helpful-links {
+      margin-top: 20px;
+    }
+
+    .helpful-links a {
+      display: block;
+      color: #ffffff;
+      text-decoration: none;
+      margin: 5px 0;
+      transition: color 0.3s;
+    }
+
+    .helpful-links a:hover {
+      color: #feb47b;
     }
   </style>
-  <link rel="stylesheet" href="/styles/lazy-styles.css">
 </head>
-
 <body>
-  <header></header>
-  <main class="error">
-    <div class="section">
-      <svg viewBox="1 0 38 18" class="error-number">
-        <text x="0" y="17">404</text>
-      </svg>
-      <h2 class="error-message">Page Not Found</h2>
-      <p class="button-container">
-        <a href="/" class="button secondary error-button-home">Go home</a>
-      </p>
-    </div>
-  </main>
-  <footer></footer>
-</body>
+  <div class="section">
+    <svg viewBox="0 0 50 20" class="error-number">
+      <text x="11" y="15">404</text>
+    </svg>
+    <h2 class="error-message">Oops! Page Not Found</h2>
+    <p>Sorry, the page you are looking for doesn't exist or has been moved.</p>
+    
+   
 
+  </div>
+</body>
 </html>

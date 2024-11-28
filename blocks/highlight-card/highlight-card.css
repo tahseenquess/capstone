@@ -1,0 +1,20 @@
+.highlight-card  > div:last-of-type {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    padding: 16px;
+    margin-top: -140px;
+position: relative;
+}
+
+
+.highlight-card  > div:last-of-type h2::after {
+  border-bottom: none;
+}
+
+
+
+.highlight-card-wrapper {
+    /* padding: 0px !important; */
+    position: relative;
+}
