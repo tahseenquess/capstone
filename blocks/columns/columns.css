@@ -9,7 +9,15 @@
 
 .featured-article {
   margin-top: 50px;
-  background-color: var(--light-gray);
+  background-color: var(white);
+}
+
+
+@media (width >= 900px) {
+  .featured-article {
+    background-color: var(--light-gray);
+  }
+  
 }
 
 .featured-article .columns-img-col img {
