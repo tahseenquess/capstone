@@ -38,6 +38,7 @@ header nav[aria-expanded='true'] {
 header .nav-sections .default-content-wrapper {
   display: flex;
   justify-content: end;
+  flex-wrap: wrap;
 }
 
 header .nav-sections .button {
