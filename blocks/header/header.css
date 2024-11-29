@@ -26,6 +26,14 @@ header .nav-sections ul li:hover {
   cursor: pointer;
 }
 
+header .nav-sections ul li {
+ height: 25px;
+}
+
+header .nav-sections ul li a {
+text-decoration: none;
+}
+
 header nav[aria-expanded='true'] {
   grid-template:
     'hamburger brand' var(--nav-height)
