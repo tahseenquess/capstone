@@ -50,6 +50,9 @@
   .carousel .carousel-slide:has(.carousel-slide-content[data-align='right']) {
     align-items: flex-end;
   }
+  .carousel-slide-image {
+    width: 100%;
+  }
   
   .carousel .carousel-slide .carousel-slide-image picture {
     inset: 0;
